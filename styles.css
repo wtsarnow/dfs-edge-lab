@@ -32,3 +32,10 @@ button.b{cursor:pointer;font-weight:600}button.b.pri{background:var(--acc);borde
 .heat td{text-align:center;font-variant-numeric:tabular-nums;min-width:64px;padding:4px 6px;border-radius:4px;color:var(--ink);cursor:pointer}
 .heat td.hs{text-align:left;background:var(--chip);cursor:default;white-space:nowrap}.heat td.na{background:var(--chip);opacity:.5;cursor:default}
 .heat small{display:block;opacity:.65;font-size:.65rem}
+
+.offg{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
+.offt{border:1px solid var(--line);border-left:4px solid var(--mut);border-radius:10px;padding:12px;background:color-mix(in srgb,var(--chip) 45%,transparent);min-width:0}
+.offt p{margin:8px 0 0;font-size:13px;overflow-wrap:anywhere}.offt .note{font-size:12px}.offh{font-size:14px}
+.offc{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.off-negative{border-left-color:var(--neg)}.off-positive{border-left-color:var(--pos)}.off-mixed,.off-correlated-traits{border-left-color:#f59e0b}.off-neutral{border-left-color:var(--acc)}.off-selection-only,.off-perception-only{border-left-color:var(--acc2)}
+.offf h2 .chip{white-space:normal}
