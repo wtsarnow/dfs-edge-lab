@@ -11,6 +11,10 @@ SIG=['salary','proj','own','implied_total','total_line','spread','moneyline','wi
  'air_yards','air_yards_share','wopr','adot','rz_targets','ez_targets','deep_tgts','contested_tgts','catchable_tgts','drops','carries','rz_carries',
  'gl_carries','rz_touches','neutral_pass_rate','pass_oe','sec_per_play','team_plays','play_action_rate','team_epa_play','cpoe','blitz_rate_faced','salary_chg']
 SAME_GAME={'snap_pct','targets','target_share','air_yards','air_yards_share','wopr','adot','rz_targets','ez_targets','deep_tgts','contested_tgts','catchable_tgts','drops','carries','rz_carries','gl_carries','rz_touches','neutral_pass_rate','pass_oe','sec_per_play','team_plays','play_action_rate','team_epa_play','cpoe','blitz_rate_faced'}
+CTX=['rain_mm','rain_flag','heat_flag','cold_flag','days_rest','opp_days_rest','rest_diff','short_week','off_bye','vs_opp_games','vs_opp_avg_fd','vs_opp_diff','team_h2h_games','team_h2h_winpct','spread_team','total_vegas','implied_team','opp_dvp','travel_miles','east_1pm_west_team','altitude_ft','turf_n','last3_avg_fd','snap_trend3','tgt_share_trend3','teammate_out','revenge_game','season_avg_td']
+for c in CTX:
+    if c not in R: R[c]=None
+SIG+=CTX
 for b in ['primetime','dome','div_game','home']: R[b+'_n']=R[b].map(lambda v: None if v is None else float(bool(v))); SIG.append(b+'_n')
 # residual vs position + implied total (what Vegas+position can't explain)
 R['fd_resid']=np.nan
@@ -43,7 +47,7 @@ ranked=P[(P.p<0.05)].copy(); ranked['abs_r']=ranked.r.abs()
 ranked=ranked.sort_values(['novelty','abs_r'],ascending=[False,False])
 # categorical: referee, surface, coach, stadium on residual
 cat=[]
-for c in ['referee','surface','roof','weekday','slate','coach']:
+for c in ['referee','surface','roof','weekday','slate','coach','kick_slot']:
     d=R[[c,'fd_resid']].dropna()
     grp=[g.fd_resid.values for _,g in d.groupby(c) if len(g)>=15]
     if len(grp)>=2:
@@ -61,7 +65,7 @@ for s,cuts in [('wiki_z',[-99,0,1,2,99]),('travel_mi',[-1,0,500,1500,9999]),('tz
     for (pos,b),g in d.groupby(['pos','b']):
         if len(g)>=8: buckets.append(dict(signal=s,pos=pos,bucket=b,n=len(g),mean_resid=round(g.fd_resid.mean(),3)))
 json.dump(dict(signals=SIG,outcomes=OUT,all=P.drop(columns=[]).to_dict('records'),ranked=ranked.head(60).drop(columns='abs_r').to_dict('records'),
-  categorical=cat,unusual=unusual.drop(columns='abs_r').to_dict('records'),buckets=buckets,
+  context_signals=CTX+['temp_f','wind_mph','primetime_n','div_game_n','home_n'],categorical=cat,unusual=unusual.drop(columns='abs_r').to_dict('records'),buckets=buckets,
   notes=['fd_resid = FD points minus a per-position linear fit on the Vegas implied team total (what Vegas and position do not explain).',
          'q = Benjamini-Hochberg false-discovery-adjusted p across every test run; treat q>0.10 as unconfirmed.',
          'In-game signals (snaps, targets, EPA) describe the same game and are not usable before lock; pre-game signals are.',
