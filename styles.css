@@ -1,0 +1,29 @@
+:root{--bg:#f6f7fb;--card:#fff;--ink:#0f172a;--mut:#64748b;--line:#e5e7eb;--acc:#2563eb;--acc2:#7c3aed;--pos:#059669;--neg:#dc2626;--chip:#eef2ff;--sh:0 1px 2px rgba(15,23,42,.06),0 4px 16px rgba(15,23,42,.05)}
+[data-theme=dark]{--bg:#0b1020;--card:#121a2e;--ink:#e6eaf3;--mut:#94a3b8;--line:#22304d;--acc:#60a5fa;--acc2:#a78bfa;--pos:#34d399;--neg:#f87171;--chip:#1c2742;--sh:0 1px 2px rgba(0,0,0,.3)}
+*{box-sizing:border-box}html,body{margin:0;overflow-x:hidden}body{font:14px/1.55 Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;height:58px}.brand{font-weight:800;font-size:17px;color:var(--ink);text-decoration:none;white-space:nowrap}.logo{color:var(--acc)}
+nav{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+nav a{padding:7px 12px;border-radius:8px;color:var(--mut);text-decoration:none;font-weight:500;white-space:nowrap}nav a.on,nav a:hover{background:var(--chip);color:var(--acc)}
+.icon{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;width:36px;height:36px;cursor:pointer;font-size:16px}
+h1{font-size:26px;margin:28px 0 4px;letter-spacing:-.02em}h2{font-size:17px;margin:0 0 12px}.sub{color:var(--mut);margin:0 0 20px}
+.grid{display:grid;gap:16px}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--sh);min-width:0;margin-bottom:16px}
+.kpi .v{font-size:28px;font-weight:800;letter-spacing:-.02em}.kpi .l{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}.kpi .d{font-size:12px;color:var(--mut)}
+.chart{height:320px;width:100%}.chart.sm{height:240px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{position:sticky;top:0;background:var(--chip);cursor:pointer;font-weight:600;user-select:none}td.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:hover td{background:color-mix(in srgb,var(--chip) 50%,transparent)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+input,select,button.b{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+button.b{cursor:pointer;font-weight:600}button.b.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+.chip{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--chip);font-size:12px;font-weight:600;color:var(--acc)}
+.chip.warn{color:#b45309;background:#fef3c7}.chip.good{color:var(--pos)}.chip.bad{color:var(--neg)}.mut{color:var(--mut)}.pos{color:var(--pos)}.neg{color:var(--neg)}
+.loading{display:flex;gap:12px;align-items:center;padding:80px 0;justify-content:center;color:var(--mut)}.spin{width:22px;height:22px;border:3px solid var(--line);border-top-color:var(--acc);border-radius:50%;animation:s 1s linear infinite}@keyframes s{to{transform:rotate(360deg)}}
+.lu{font-size:13px}.lu td{padding:5px 8px}.pager{display:flex;gap:6px;align-items:center;margin-top:8px;color:var(--mut);font-size:12px}
+.foot{color:var(--mut);font-size:12px;padding:30px 20px}.note{font-size:12px;color:var(--mut)}
+.plist{max-height:520px;overflow:auto}.plist div{padding:7px 10px;border-radius:8px;cursor:pointer}.plist div:hover,.plist div.on{background:var(--chip)}
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3,.g2{grid-template-columns:minmax(0,1fr)}.brand span.t{display:none}}
+@media(max-width:560px){.wrap{padding:0 12px}.bar{gap:8px}.brand{font-size:0}.brand .logo{font-size:20px}h1{font-size:21px}.kpi .v{font-size:22px}.chart{height:260px}}
+.pgrid{grid-template-columns:minmax(0,1fr) minmax(0,2.4fr)}.lug{grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))}@media(max-width:900px){.pgrid{grid-template-columns:minmax(0,1fr)}.plist{max-height:220px}}

@@ -1,0 +1,422 @@
+{
+ "season": 2026,
+ "updated": "2026-10-23",
+ "autotune_history": [
+  {
+   "date": "2026-10-04",
+   "status": "FROZEN",
+   "why": "Wk4 Sunday Million BEAT_80 YES"
+  },
+  {
+   "date": "2026-10-09",
+   "status": "ACTIVE",
+   "why": "Two straight misses"
+  },
+  {
+   "date": "2026-10-18",
+   "status": "FROZEN",
+   "why": "Wk6 Hail Mary L19 BEAT_80 YES"
+  },
+  {
+   "date": "2026-10-21",
+   "status": "ACTIVE",
+   "why": "Resumed"
+  },
+  {
+   "date": "2026-10-23",
+   "status": "FROZEN",
+   "why": "Wk7 TNF Gridiron mock BEAT_80 YES"
+  }
+ ],
+ "weeks": [
+  {
+   "week": 3,
+   "dates": "Sep 24 \u2013 Sep 28",
+   "autotune": "ACTIVE",
+   "beat80": false,
+   "summary": "First full week tracked. Three graded contests, none in the top 20%.",
+   "slates": [
+    {
+     "name": "TNF",
+     "game": "Showdown"
+    },
+    {
+     "name": "Sunday Main",
+     "game": "Classic"
+    },
+    {
+     "name": "MNF PHI @ CHI",
+     "game": "Showdown"
+    }
+   ],
+   "entries": [
+    {
+     "slate": "TNF",
+     "contest": "$125K Thu NFL Rush",
+     "fee": null,
+     "lineup": null,
+     "score": 98.22,
+     "rank": 27904,
+     "field": 49603,
+     "pct": 43.7,
+     "winnings": null
+    },
+    {
+     "slate": "Sunday",
+     "contest": "$80K Sun NFL Rush (Classic)",
+     "fee": null,
+     "lineup": null,
+     "score": 108.36,
+     "rank": 7599,
+     "field": 10582,
+     "pct": 28.2,
+     "winnings": null
+    },
+    {
+     "slate": "MNF",
+     "contest": "$500K Monday Night Special",
+     "fee": 15,
+     "lineup": null,
+     "score": 62.03,
+     "rank": 12699,
+     "field": 39682,
+     "pct": 68,
+     "pct_note": "upper bound; field is the max size",
+     "winnings": 0
+    }
+   ],
+   "data_points": [],
+   "worked": [],
+   "didnt": [],
+   "patches": []
+  },
+  {
+   "week": 4,
+   "dates": "Oct 1 \u2013 Oct 5",
+   "autotune": "FROZEN",
+   "beat80": true,
+   "summary": "Sunday Million finished top 6.4%, the first BEAT_80 hit, which froze auto-tune.",
+   "entries": [
+    {
+     "slate": "TNF",
+     "contest": "$500K Thursday Night Special",
+     "fee": null,
+     "lineup": null,
+     "score": 65.87,
+     "rank": 37646,
+     "field": null,
+     "pct": null,
+     "winnings": 0
+    },
+    {
+     "slate": "Sunday",
+     "contest": "$1.4M Sunday Million",
+     "fee": 15,
+     "lineup": null,
+     "score": 144.62,
+     "rank": 6580,
+     "field": 102384,
+     "pct": 93.6,
+     "winnings": 40,
+     "beat80": true
+    },
+    {
+     "slate": "MNF",
+     "contest": "$444K Monday Night Special ATL @ NO",
+     "fee": 15,
+     "lineup": null,
+     "score": 89.06,
+     "rank": 18317,
+     "field": 35238,
+     "pct": 48.0,
+     "winnings": 0
+    }
+   ],
+   "data_points": [
+    {
+     "k": "MNF ATL@NO Vegas total",
+     "v": "47.5"
+    }
+   ],
+   "worked": [
+    "Sunday Million Classic build: 144.62 points, rank 6,580 of 102,384"
+   ],
+   "didnt": [
+    "TNF Showdown 65.87, outside the cash line"
+   ],
+   "patches": []
+  },
+  {
+   "week": 5,
+   "dates": "Oct 8 \u2013 Oct 12",
+   "autotune": "ACTIVE",
+   "beat80": false,
+   "summary": "Two eligible misses in a row (TNF about 16%, Sunday Million 58.1%), so auto-tune resumed.",
+   "entries": [
+    {
+     "slate": "TNF",
+     "contest": "$475K Thursday Night Special TB @ DAL",
+     "fee": 15,
+     "lineup": null,
+     "score": 52.34,
+     "rank": 31655,
+     "field": 37698,
+     "pct": 16.0,
+     "winnings": 0,
+     "cash_line": 86.65,
+     "winner": 125.09
+    },
+    {
+     "slate": "Sunday",
+     "contest": "$1.3M Sunday Million",
+     "fee": 15,
+     "lineup": null,
+     "score": 137.58,
+     "rank": 41806,
+     "field": 99740,
+     "pct": 58.1,
+     "winnings": 0,
+     "cash_line": 149.22,
+     "top20_rank": 19948,
+     "winner": 232.98
+    }
+   ],
+   "data_points": [
+    {
+     "k": "TB@DAL Vegas total",
+     "v": "47.5"
+    },
+    {
+     "k": "SNF BAL@ATL prediction (no entry)",
+     "v": "78.69 FD box recompute; winner 116.29"
+    },
+    {
+     "k": "Sunday Million places paid",
+     "v": "25,274"
+    }
+   ],
+   "worked": [],
+   "didnt": [
+    "TNF 52.34 vs a cash line of 86.65",
+    "Sunday Million scoring check found 11 points of drift, which was fixed"
+   ],
+   "patches": [
+    "Late-swap RB discipline",
+    "Showdown lead RB with top TD odds stays in the FLEX pool",
+    "Starting backup QB added to the MVP pool",
+    "FanDuel scoring check (bonuses, kicker tiers)"
+   ]
+  },
+  {
+   "week": 6,
+   "dates": "Oct 15 \u2013 Oct 19",
+   "autotune": "FROZEN",
+   "beat80": true,
+   "summary": "Hail Mary L19 finished top 2% (150.82). Five of 19 cashed. The MNF Dive entries all missed the cash line of about 101.14.",
+   "entries": [
+    {
+     "slate": "Sunday",
+     "contest": "$45K Sun NFL Hail Mary (L19, best of 19)",
+     "fee": 4.75,
+     "lineup": null,
+     "score": 150.82,
+     "rank": 4303,
+     "field": 215568,
+     "pct": 98.0,
+     "winnings": 3.2,
+     "cash_line": 120.78,
+     "beat80": true,
+     "note": "19 \u00d7 $0.25 entries; 5 cashed ($3.20 as reported)"
+    },
+    {
+     "slate": "Sunday",
+     "contest": "$200 Reserve Weekly Free Play (mock)",
+     "fee": 0,
+     "lineup": null,
+     "score": 110.9,
+     "rank": 4685,
+     "field": 9368,
+     "pct": 50,
+     "winnings": 0
+    },
+    {
+     "slate": "SNF",
+     "contest": "SNF DAL @ GB Primetime mock",
+     "fee": null,
+     "lineup": null,
+     "score": null,
+     "rank": null,
+     "field": null,
+     "pct": 52,
+     "estimated": true,
+     "winnings": 0
+    },
+    {
+     "slate": "MNF",
+     "contest": "$30K Dive WAS @ SF (L2)",
+     "fee": null,
+     "lineup": null,
+     "score": 91.56,
+     "rank": 19552,
+     "field": 35714,
+     "pct": 45.3,
+     "winnings": 0,
+     "cash_line": 101.14
+    },
+    {
+     "slate": "MNF",
+     "contest": "$30K Dive WAS @ SF (L3)",
+     "fee": null,
+     "lineup": null,
+     "score": 87.76,
+     "rank": 23825,
+     "field": 35714,
+     "pct": 33.3,
+     "winnings": 0,
+     "cash_line": 101.14
+    },
+    {
+     "slate": "MNF",
+     "contest": "$30K Dive WAS @ SF (L1)",
+     "fee": null,
+     "lineup": null,
+     "score": 86.84,
+     "rank": 24828,
+     "field": 35714,
+     "pct": 30.5,
+     "winnings": 0,
+     "cash_line": 101.14
+    }
+   ],
+   "data_points": [
+    {
+     "k": "Hail Mary top-20% rank line",
+     "v": "43,113"
+    },
+    {
+     "k": "Other Hail Mary lineups in the top 20%",
+     "v": "L12 144.10, L6 140.26, L14 129.60"
+    },
+    {
+     "k": "Sim SF team total vs Vegas",
+     "v": "29.9 vs 23"
+    }
+   ],
+   "worked": [
+    "A spread 19-lineup Hail Mary portfolio: 4 lineups in the top 20%",
+    "One shared scorer (fdscore.py) matched FanDuel's official scores in 3 of 3 checks"
+   ],
+   "didnt": [
+    "MNF: SF sim total ran about 7 points above Vegas",
+    "Spreading a dog MVP across lineups was refuted by the MNF result"
+   ],
+   "patches": [
+    "Backup-RB role floor",
+    "One shared scorer fdscore.py",
+    "Showdown K pool",
+    "Grade the locked roster from the entry scoring page"
+   ]
+  },
+  {
+   "week": 7,
+   "dates": "Oct 22 \u2013 Oct 26",
+   "autotune": "FROZEN",
+   "beat80": true,
+   "summary": "TNF NE @ CHI: the Gridiron mock with Swift at MVP finished top 18% and won $15. The Dive entry with A.J. Brown at MVP finished near the bottom.",
+   "entries": [
+    {
+     "slate": "TNF",
+     "contest": "$40K Thu NFL Gridiron NE @ CHI",
+     "fee": 9,
+     "lineup": "MVP D'Andre Swift",
+     "score": 123.06,
+     "rank": 952,
+     "field": 5291,
+     "pct": 82.0,
+     "winnings": 15,
+     "beat80": true
+    },
+    {
+     "slate": "TNF",
+     "contest": "$30K Thu NFL Dive NE @ CHI",
+     "fee": 1,
+     "lineup": "MVP A.J. Brown",
+     "score": 86.81,
+     "rank": 33197,
+     "field": 35714,
+     "pct": 7.0,
+     "winnings": 0
+    }
+   ],
+   "data_points": [
+    {
+     "k": "Line",
+     "v": "CHI \u22123, total 50.5 (open CHI \u22121.5 / 47.5)"
+    },
+    {
+     "k": "Team totals",
+     "v": "NE 24.5 / CHI 26.5"
+    },
+    {
+     "k": "Weather",
+     "v": "54\u201360\u00b0F, wind 5\u20137 mph, 0% precipitation"
+    },
+    {
+     "k": "Injuries",
+     "v": "Monangai OUT; A.J. Brown active (FP Wed)"
+    },
+    {
+     "k": "Ownership model (chalk)",
+     "v": "Swift FLEX 50\u201365%, C. Williams 55\u201370%, Maye 55\u201370% (model estimate)"
+    },
+    {
+     "k": "Projections",
+     "v": "Williams 18.5, Maye 18.4, Swift 17.3"
+    }
+   ],
+   "worked": [
+    "Swift at MVP, the model's top value play"
+   ],
+   "didnt": [
+    "A.J. Brown at MVP in the Dive"
+   ],
+   "patches": []
+  },
+  {
+   "week": 8,
+   "dates": "Oct 25 \u2013 Oct 26",
+   "autotune": "FROZEN",
+   "beat80": null,
+   "pending": true,
+   "summary": "Sunday main slate 135562, locks Sun 10/25 at 1:00 PM ET. 7 entries; lineups pending.",
+   "entries": [
+    {
+     "slate": "Sunday",
+     "contest": "$250K Kickoff (x5)",
+     "fee": 3,
+     "count": 5,
+     "lineup": null,
+     "score": null
+    },
+    {
+     "slate": "Sunday",
+     "contest": "$35K Pooch Punt",
+     "fee": 0.05,
+     "lineup": null,
+     "score": null
+    },
+    {
+     "slate": "Sunday",
+     "contest": "$200 Reserve Free Play",
+     "fee": 0,
+     "lineup": null,
+     "score": null
+    }
+   ],
+   "data_points": [],
+   "worked": [],
+   "didnt": [],
+   "patches": []
+  }
+ ]
+}

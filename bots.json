@@ -1,0 +1,423 @@
+{
+"bots": [
+{
+"bot": "fanduel",
+"role": "Orchestrator: builds every slate lineup, coordinates specialists, applies auto-tune/BEAT_80 rules.",
+"ablation_input": null,
+"ablation": [],
+"history": {
+"records": "11 ledger rows (fd-beat80-ledger.md)",
+"hit": "2 BEAT_80 YES of 9 decided"
+},
+"patches": []
+},
+{
+"bot": "fanduel-projections",
+"role": "Median/ceiling/floor per player (fd-proj/*.csv).",
+"ablation_input": "projections",
+"ablation": [
+{
+"build": "Top #1 (median)",
+"bot": "fanduel-projections",
+"removed_input": "projections",
+"players_changed": 5,
+"delta_proj_full_model": -11.93,
+"players_out": "Ja'Kobi Lane; Jalen Coker; Nico Collins; Tennessee Titans; Woody Marks",
+"players_in": "Christian McCaffrey; Houston Texans; Isaac TeSlaa; Konata Mumpfield; Tay Martin"
+},
+{
+"build": "GPP leverage",
+"bot": "fanduel-projections",
+"removed_input": "projections",
+"players_changed": 5,
+"delta_proj_full_model": -54.22,
+"players_out": "Ja'Kobi Lane; Jahmyr Gibbs; Matthew Golden; Sam LaPorta; Tennessee Titans",
+"players_in": "Amon-Ra St. Brown; Jacob Saylors; Jameson Williams; Konata Mumpfield; San Francisco 49ers"
+}
+],
+"history": {
+"records": "376 graded player projections",
+"hit": "r=0.719, MAE=3.76 pts, beat-proj rate 34%"
+},
+"patches": []
+},
+{
+"bot": "fanduel-salaries",
+"role": "Verified FD salary board + FD injury tags (w8-mocks/board_135562.csv).",
+"ablation_input": null,
+"ablation": [],
+"history": {
+"records": "Board is the optimizer's required universe; no ablation possible (no lineup without salaries).",
+"hit": null
+},
+"patches": []
+},
+{
+"bot": "fanduel-ownership",
+"role": "Ownership bands (MODEL) and chalk/leverage flags.",
+"ablation_input": "ownership",
+"ablation": [
+{
+"build": "Top #1 (median)",
+"bot": "fanduel-ownership",
+"removed_input": "ownership",
+"players_changed": 0,
+"delta_proj_full_model": 0.0,
+"players_out": "",
+"players_in": ""
+},
+{
+"build": "GPP leverage",
+"bot": "fanduel-ownership",
+"removed_input": "ownership",
+"players_changed": 2,
+"delta_proj_full_model": -2.44,
+"players_out": "Christian McCaffrey; Ja'Kobi Lane",
+"players_in": "Jalen Coker; Woody Marks"
+}
+],
+"history": {
+"records": "163 player-games carry a model ownership; ownership-calibration.md has 0 graded rows",
+"hit": "No actual FD ownership saved to grade against"
+},
+"patches": []
+},
+{
+"bot": "fanduel-injury-report",
+"role": "Final designations, play likelihood, beneficiary bumps (w8-main/injuries.md).",
+"ablation_input": "injury",
+"ablation": [
+{
+"build": "Top #1 (median)",
+"bot": "fanduel-injury-report",
+"removed_input": "injury",
+"players_changed": 0,
+"delta_proj_full_model": 0.0,
+"players_out": "",
+"players_in": ""
+},
+{
+"build": "GPP leverage",
+"bot": "fanduel-injury-report",
+"removed_input": "injury",
+"players_changed": 0,
+"delta_proj_full_model": 0.0,
+"players_out": "",
+"players_in": ""
+}
+],
+"history": {
+"records": "No saved call-vs-outcome log",
+"hit": null
+},
+"patches": []
+},
+{
+"bot": "fanduel-weather",
+"role": "Wind/temp/precip by stadium (weather/*.md).",
+"ablation_input": null,
+"ablation": [],
+"history": {
+"records": "Saved Week 6 notes only; no Week 8 output, so no ablation; no graded log",
+"hit": null
+},
+"patches": []
+},
+{
+"bot": "fanduel-odds",
+"role": "Vegas consensus, implied team totals, line moves (w8-main/odds.md).",
+"ablation_input": "odds",
+"ablation": [
+{
+"build": "Top #1 (median)",
+"bot": "fanduel-odds",
+"removed_input": "odds",
+"players_changed": 3,
+"delta_proj_full_model": -1.59,
+"players_out": "Ja'Kobi Lane; Jared Goff; Nico Collins",
+"players_in": "C.J. Stroud; Chris Godwin Jr.; Tetairoa McMillan"
+},
+{
+"build": "GPP leverage",
+"bot": "fanduel-odds",
+"removed_input": "odds",
+"players_changed": 0,
+"delta_proj_full_model": 0.0,
+"players_out": "",
+"players_in": ""
+}
+],
+"history": {
+"records": "No saved graded log of line calls",
+"hit": null
+},
+"patches": []
+},
+{
+"bot": "fanduel-game-script",
+"role": "Script buckets (grind/balanced/shootout) and total bands.",
+"ablation_input": "game-script",
+"ablation": [
+{
+"build": "Top #1 (median)",
+"bot": "fanduel-game-script",
+"removed_input": "game-script",
+"players_changed": 0,
+"delta_proj_full_model": 0.0,
+"players_out": "",
+"players_in": ""
+},
+{
+"build": "GPP leverage",
+"bot": "fanduel-game-script",
+"removed_input": "game-script",
+"players_changed": 2,
+"delta_proj_full_model": -5.69,
+"players_out": "Jared Goff; Sam LaPorta",
+"players_in": "C.J. Stroud; Woody Marks"
+}
+],
+"history": {
+"records": "3 graded games (game-script-calibration.csv)",
+"hit": "bucket hit 1/3, total inside p10-p90 2/3"
+},
+"patches": []
+},
+{
+"bot": "fanduel-offense-overall",
+"role": "Team EPA/play median with bands, target/air/RZ shares (w8-main/offense.md).",
+"ablation_input": "offense-overall",
+"ablation": [
+{
+"build": "Top #1 (median)",
+"bot": "fanduel-offense-overall",
+"removed_input": "offense-overall",
+"players_changed": 1,
+"delta_proj_full_model": -0.63,
+"players_out": "Nico Collins",
+"players_in": "Zay Flowers"
+},
+{
+"build": "GPP leverage",
+"bot": "fanduel-offense-overall",
+"removed_input": "offense-overall",
+"players_changed": 0,
+"delta_proj_full_model": 0.0,
+"players_out": "",
+"players_in": ""
+}
+],
+"history": {
+"records": "2 graded team-games (epa-calibration.csv)",
+"hit": "inside band 0/2, MAE 0.165 EPA/play"
+},
+"patches": []
+},
+{
+"bot": "fanduel-late-news",
+"role": "Last-minute inactives and lock-flip checks.",
+"ablation_input": null,
+"ablation": [],
+"history": {
+"records": "No saved structured outputs in /workspace (only inactives notes, e.g. *-inactives-*.md); not graded",
+"hit": null
+},
+"patches": []
+},
+{
+"bot": "fanduel-simulator",
+"role": "Monte-Carlo sim medians/value (sim_w8main/).",
+"ablation_input": "simulator",
+"ablation": [
+{
+"build": "Top #1 (median)",
+"bot": "fanduel-simulator",
+"removed_input": "simulator",
+"players_changed": 0,
+"delta_proj_full_model": 0.0,
+"players_out": "",
+"players_in": ""
+},
+{
+"build": "GPP leverage",
+"bot": "fanduel-simulator",
+"removed_input": "simulator",
+"players_changed": 0,
+"delta_proj_full_model": 0.0,
+"players_out": "",
+"players_in": ""
+}
+],
+"history": {
+"records": "sim_calibration.csv has 0 graded rows",
+"hit": null
+},
+"patches": []
+},
+{
+"bot": "fanduel-field-payout",
+"role": "Contest field size, cash lines, payout structure.",
+"ablation_input": null,
+"ablation": [],
+"history": {
+"records": "7 contests in fd-field-calibration.csv (field reference data, not predictions)",
+"hit": null
+},
+"patches": []
+},
+{
+"bot": "fanduel-contest-results",
+"role": "Pulls official rank/field/percentile from FanDuel History.",
+"ablation_input": null,
+"ablation": [],
+"history": {
+"records": "9 OFFICIAL results recorded in the ledger",
+"hit": null
+},
+"patches": []
+},
+{
+"bot": "fanduel-review",
+"role": "Weekly grading and patch proposals (fd-patch-log.md).",
+"ablation_input": null,
+"ablation": [],
+"history": {
+"records": "16 patches logged",
+"hit": "applied 7, proposals 5, retired 1; results: 2 confirmed, rest pending"
+},
+"patches": [
+"2026-10-11 | Late-swap RB discipline (confirmed inactive/role change only; 10/18 beat/depth-chart demotion counts) | Wk5 SM, Wk6 | HC | yes | pending",
+"2026-10-11 | Showdown lead RB with top TD odds stays in FLEX pool | Wk5 TNF, Wk5 SNF | HC | yes | pending",
+"2026-10-11 | Starting backup QB in MVP pool | Wk5 SNF (Huntley), Keenum | HC | yes | pending",
+"2026-10-12 | FD scoring check (bonuses, kicker tiers) | Wk5 SM -11, Wk5 MNF -1 | HC | yes | fixed",
+"2026-10-13 | Inactives re-add (Collins, Penix, Nacua) | Wk5 | HC | UNCONFIRMED | -",
+"2026-10-13 | Showdown bring-back max 4 from one team, keep opp QB/WR1 in pool | Wk5 TNF, Wk5 MNF | HC | UNCONFIRMED | -",
+"2026-10-18 | Backup-RB role floor | Wk5-6 | HC | yes | pending",
+"2026-10-18 | One shared scorer fdscore.py + reconcile | Wk5 SM, Wk5 MNF, Wk6 SM | HC | yes | matched 3/3 official",
+"2026-10-18 | Showdown K pool (both K in FLEX, sim one K build) | Wk5 SNF Loop, Wk6 SNF Smack | HC | yes | pending",
+"2026-10-20 | Grade locked roster from entry scoring page | Wk5 TNF, Wk6 TNF, Wk6 MNF L1/L2 | HC | own prompt | -",
+"2026-10-20 | Cap one low-floor WR at 2 of 3 multi-entries | Wk6 MNF McLaurin | PROPOSAL | no | -",
+"2026-10-20 | Sim team total within ~2 of Vegas implied | Wk6 MNF SF 29.9 vs 23 | PROPOSAL | no | -",
+"2026-10-20 | Dog QB keeps full MVP weight at spread 7+ | Wk6 MNF Daniels | PROPOSAL | no | -",
+"2026-10-18 | Two RBs from one committee need one at 60%+ snaps | Wk6 SNF Lloyd | PROPOSAL | no | -",
+"2026-10-18 | Same-team WRs ranked by 3-wk target/air share | Wk6 SNF Golden | PROPOSAL | no | -",
+"RETIRED 2026-10-20 | Dog MVP on at most 1 of 3 entries | refuted by Wk6 MNF | - | no | -"
+]
+}
+],
+"epa": [
+{
+"date": "2026-10-22",
+"slate": "TNF-135561",
+"team": "NE",
+"opp": "CHI",
+"median": "0.08",
+"low": "-0.02",
+"high": "0.18",
+"actual": "0.185",
+"inside_band": "N"
+},
+{
+"date": "2026-10-22",
+"slate": "TNF-135561",
+"team": "CHI",
+"opp": "NE",
+"median": "-0.03",
+"low": "-0.13",
+"high": "0.07",
+"actual": "0.195",
+"inside_band": "N"
+}
+],
+"game_script": [
+{
+"date": "2026-10-12",
+"game": "BUF@LAR",
+"line_spread": "LAR -3.5",
+"line_total": "54.5",
+"pred_grind": "11",
+"pred_balanced": "44",
+"pred_shootout": "33",
+"pred_fav14": "8",
+"pred_dog14": "4",
+"pred_top_bucket": "balanced",
+"model_p10": "39",
+"model_p50": "53",
+"model_p90": "68",
+"final_score": "BUF 37-LAR 34 OT",
+"actual_total": "71",
+"actual_bucket": "shootout",
+"in_p10_p90": "no"
+},
+{
+"date": "2026-10-15",
+"game": "SEA@DEN",
+"line_spread": "SEA -2.5",
+"line_total": "40.5",
+"pred_grind": "28",
+"pred_balanced": "45",
+"pred_shootout": "10",
+"pred_fav14": "10",
+"pred_dog14": "7",
+"pred_top_bucket": "balanced",
+"model_p10": "29",
+"model_p50": "41",
+"model_p90": "54",
+"final_score": "DEN 17-SEA 14 OT",
+"actual_total": "31",
+"actual_bucket": "grind",
+"in_p10_p90": "yes"
+},
+{
+"date": "2026-10-19",
+"game": "WAS@SF",
+"line_spread": "SF -7.5",
+"line_total": "52",
+"pred_grind": "10",
+"pred_balanced": "45",
+"pred_shootout": "12",
+"pred_fav14": "33",
+"pred_dog14": "3",
+"pred_top_bucket": "balanced",
+"model_p10": "38",
+"model_p50": "51",
+"model_p90": "65",
+"final_score": "SF 23-WAS 17",
+"actual_total": "40",
+"actual_bucket": "balanced",
+"in_p10_p90": "yes"
+}
+],
+"proj_accuracy": {
+"DST": {
+"n": 28,
+"mae": 4.46,
+"r": 0.196
+},
+"K": {
+"n": 12,
+"mae": 3.43,
+"r": -0.268
+},
+"QB": {
+"n": 45,
+"mae": 3.49,
+"r": 0.87
+},
+"RB": {
+"n": 87,
+"mae": 4.15,
+"r": 0.683
+},
+"TE": {
+"n": 72,
+"mae": 3.46,
+"r": 0.514
+},
+"WR": {
+"n": 132,
+"mae": 3.65,
+"r": 0.659
+}
+}
+}

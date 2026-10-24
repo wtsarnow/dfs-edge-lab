@@ -1,0 +1,930 @@
+{
+ "updated": "2026-10-23",
+ "rows_scored": 2052,
+ "games": 62,
+ "coverage": {
+  "salary": 847,
+  "proj": 376,
+  "own": 163,
+  "wiki_views_7d": 1862,
+  "trends_rel": 808,
+  "x_mentions": 0,
+  "temp_f": 684,
+  "opp_def_rank": 2052
+ },
+ "correlations": [
+  {
+   "signal": "salary",
+   "target": "fd_pts",
+   "n": 847,
+   "r": 0.602,
+   "rho": 0.532
+  },
+  {
+   "signal": "salary",
+   "target": "beat_proj",
+   "n": 376,
+   "r": 0.034,
+   "rho": -0.09
+  },
+  {
+   "signal": "salary",
+   "target": "value",
+   "n": 847,
+   "r": 0.349,
+   "rho": 0.474
+  },
+  {
+   "signal": "proj",
+   "target": "fd_pts",
+   "n": 376,
+   "r": 0.719,
+   "rho": 0.765
+  },
+  {
+   "signal": "proj",
+   "target": "beat_proj",
+   "n": 376,
+   "r": -0.049,
+   "rho": -0.154
+  },
+  {
+   "signal": "proj",
+   "target": "value",
+   "n": 376,
+   "r": 0.466,
+   "rho": 0.641
+  },
+  {
+   "signal": "own",
+   "target": "fd_pts",
+   "n": 163,
+   "r": 0.457,
+   "rho": 0.455
+  },
+  {
+   "signal": "own",
+   "target": "beat_proj",
+   "n": 163,
+   "r": -0.223,
+   "rho": -0.235
+  },
+  {
+   "signal": "own",
+   "target": "value",
+   "n": 163,
+   "r": 0.218,
+   "rho": 0.32
+  },
+  {
+   "signal": "wiki_views_7d",
+   "target": "fd_pts",
+   "n": 1862,
+   "r": 0.364,
+   "rho": 0.546
+  },
+  {
+   "signal": "wiki_views_7d",
+   "target": "beat_proj",
+   "n": 337,
+   "r": -0.15,
+   "rho": -0.097
+  },
+  {
+   "signal": "wiki_views_7d",
+   "target": "value",
+   "n": 760,
+   "r": 0.262,
+   "rho": 0.502
+  },
+  {
+   "signal": "log_wiki",
+   "target": "fd_pts",
+   "n": 1862,
+   "r": 0.496,
+   "rho": 0.546
+  },
+  {
+   "signal": "log_wiki",
+   "target": "beat_proj",
+   "n": 337,
+   "r": -0.062,
+   "rho": -0.097
+  },
+  {
+   "signal": "log_wiki",
+   "target": "value",
+   "n": 760,
+   "r": 0.403,
+   "rho": 0.502
+  },
+  {
+   "signal": "wiki_spike",
+   "target": "fd_pts",
+   "n": 1862,
+   "r": -0.116,
+   "rho": -0.235
+  },
+  {
+   "signal": "wiki_spike",
+   "target": "beat_proj",
+   "n": 337,
+   "r": 0.075,
+   "rho": 0.182
+  },
+  {
+   "signal": "wiki_spike",
+   "target": "value",
+   "n": 760,
+   "r": -0.051,
+   "rho": -0.14
+  },
+  {
+   "signal": "trends_rel",
+   "target": "fd_pts",
+   "n": 808,
+   "r": -0.014,
+   "rho": 0.198
+  },
+  {
+   "signal": "trends_rel",
+   "target": "beat_proj",
+   "n": 344,
+   "r": -0.09,
+   "rho": -0.152
+  },
+  {
+   "signal": "trends_rel",
+   "target": "value",
+   "n": 808,
+   "r": -0.017,
+   "rho": 0.171
+  },
+  {
+   "signal": "x_mentions",
+   "target": "fd_pts",
+   "n": 0,
+   "r": null,
+   "rho": null
+  },
+  {
+   "signal": "x_mentions",
+   "target": "beat_proj",
+   "n": 0,
+   "r": null,
+   "rho": null
+  },
+  {
+   "signal": "x_mentions",
+   "target": "value",
+   "n": 0,
+   "r": null,
+   "rho": null
+  },
+  {
+   "signal": "rest_days",
+   "target": "fd_pts",
+   "n": 2052,
+   "r": 0.001,
+   "rho": -0.003
+  },
+  {
+   "signal": "rest_days",
+   "target": "beat_proj",
+   "n": 376,
+   "r": 0.01,
+   "rho": 0.049
+  },
+  {
+   "signal": "rest_days",
+   "target": "value",
+   "n": 847,
+   "r": 0.028,
+   "rho": 0.053
+  },
+  {
+   "signal": "home",
+   "target": "fd_pts",
+   "n": 2052,
+   "r": 0.007,
+   "rho": 0.004
+  },
+  {
+   "signal": "home",
+   "target": "beat_proj",
+   "n": 376,
+   "r": -0.067,
+   "rho": -0.046
+  },
+  {
+   "signal": "home",
+   "target": "value",
+   "n": 847,
+   "r": 0.003,
+   "rho": 0.008
+  },
+  {
+   "signal": "primetime",
+   "target": "fd_pts",
+   "n": 2052,
+   "r": -0.021,
+   "rho": -0.066
+  },
+  {
+   "signal": "primetime",
+   "target": "beat_proj",
+   "n": 376,
+   "r": 0.082,
+   "rho": 0.132
+  },
+  {
+   "signal": "primetime",
+   "target": "value",
+   "n": 847,
+   "r": 0.045,
+   "rho": 0.075
+  },
+  {
+   "signal": "dome",
+   "target": "fd_pts",
+   "n": 2052,
+   "r": 0.019,
+   "rho": -0.009
+  },
+  {
+   "signal": "dome",
+   "target": "beat_proj",
+   "n": 376,
+   "r": 0.036,
+   "rho": 0.003
+  },
+  {
+   "signal": "dome",
+   "target": "value",
+   "n": 847,
+   "r": 0.063,
+   "rho": 0.078
+  },
+  {
+   "signal": "temp_f",
+   "target": "fd_pts",
+   "n": 684,
+   "r": -0.034,
+   "rho": -0.003
+  },
+  {
+   "signal": "temp_f",
+   "target": "beat_proj",
+   "n": 0,
+   "r": null,
+   "rho": null
+  },
+  {
+   "signal": "temp_f",
+   "target": "value",
+   "n": 68,
+   "r": 0.133,
+   "rho": 0.102
+  },
+  {
+   "signal": "total_line",
+   "target": "fd_pts",
+   "n": 2052,
+   "r": 0.018,
+   "rho": -0.036
+  },
+  {
+   "signal": "total_line",
+   "target": "beat_proj",
+   "n": 376,
+   "r": 0.065,
+   "rho": 0.082
+  },
+  {
+   "signal": "total_line",
+   "target": "value",
+   "n": 847,
+   "r": 0.018,
+   "rho": 0.018
+  },
+  {
+   "signal": "spread",
+   "target": "fd_pts",
+   "n": 2052,
+   "r": -0.041,
+   "rho": -0.025
+  },
+  {
+   "signal": "spread",
+   "target": "beat_proj",
+   "n": 376,
+   "r": 0.042,
+   "rho": 0.011
+  },
+  {
+   "signal": "spread",
+   "target": "value",
+   "n": 847,
+   "r": 0.012,
+   "rho": 0.011
+  },
+  {
+   "signal": "opp_def_rank",
+   "target": "fd_pts",
+   "n": 2052,
+   "r": -0.012,
+   "rho": -0.022
+  },
+  {
+   "signal": "opp_def_rank",
+   "target": "beat_proj",
+   "n": 376,
+   "r": 0.002,
+   "rho": -0.051
+  },
+  {
+   "signal": "opp_def_rank",
+   "target": "value",
+   "n": 847,
+   "r": 0.003,
+   "rho": -0.011
+  },
+  {
+   "signal": "kickoff_hour",
+   "target": "fd_pts",
+   "n": 2052,
+   "r": -0.026,
+   "rho": -0.071
+  },
+  {
+   "signal": "kickoff_hour",
+   "target": "beat_proj",
+   "n": 376,
+   "r": 0.064,
+   "rho": 0.117
+  },
+  {
+   "signal": "kickoff_hour",
+   "target": "value",
+   "n": 847,
+   "r": 0.036,
+   "rho": 0.07
+  },
+  {
+   "signal": "our_lineups",
+   "target": "fd_pts",
+   "n": 42,
+   "r": -0.062,
+   "rho": -0.091
+  },
+  {
+   "signal": "our_lineups",
+   "target": "beat_proj",
+   "n": 42,
+   "r": -0.11,
+   "rho": -0.173
+  },
+  {
+   "signal": "our_lineups",
+   "target": "value",
+   "n": 42,
+   "r": 0.015,
+   "rho": -0.056
+  }
+ ],
+ "by_position": [
+  {
+   "pos": "QB",
+   "signal": "salary",
+   "n": 107,
+   "rho": 0.631
+  },
+  {
+   "pos": "QB",
+   "signal": "log_wiki",
+   "n": 201,
+   "rho": 0.568
+  },
+  {
+   "pos": "QB",
+   "signal": "wiki_spike",
+   "n": 201,
+   "rho": -0.33
+  },
+  {
+   "pos": "QB",
+   "signal": "trends_rel",
+   "n": 107,
+   "rho": 0.428
+  },
+  {
+   "pos": "QB",
+   "signal": "opp_def_rank",
+   "n": 206,
+   "rho": -0.024
+  },
+  {
+   "pos": "QB",
+   "signal": "total_line",
+   "n": 206,
+   "rho": 0.095
+  },
+  {
+   "pos": "QB",
+   "signal": "spread",
+   "n": 206,
+   "rho": -0.064
+  },
+  {
+   "pos": "QB",
+   "signal": "home",
+   "n": 206,
+   "rho": 0.01
+  },
+  {
+   "pos": "QB",
+   "signal": "dome",
+   "n": 206,
+   "rho": 0.054
+  },
+  {
+   "pos": "QB",
+   "signal": "primetime",
+   "n": 206,
+   "rho": -0.029
+  },
+  {
+   "pos": "QB",
+   "signal": "rest_days",
+   "n": 206,
+   "rho": 0.029
+  },
+  {
+   "pos": "RB",
+   "signal": "salary",
+   "n": 186,
+   "rho": 0.589
+  },
+  {
+   "pos": "RB",
+   "signal": "log_wiki",
+   "n": 438,
+   "rho": 0.599
+  },
+  {
+   "pos": "RB",
+   "signal": "wiki_spike",
+   "n": 438,
+   "rho": -0.241
+  },
+  {
+   "pos": "RB",
+   "signal": "trends_rel",
+   "n": 184,
+   "rho": 0.122
+  },
+  {
+   "pos": "RB",
+   "signal": "opp_def_rank",
+   "n": 452,
+   "rho": -0.045
+  },
+  {
+   "pos": "RB",
+   "signal": "total_line",
+   "n": 452,
+   "rho": 0.018
+  },
+  {
+   "pos": "RB",
+   "signal": "spread",
+   "n": 452,
+   "rho": -0.014
+  },
+  {
+   "pos": "RB",
+   "signal": "home",
+   "n": 452,
+   "rho": 0.027
+  },
+  {
+   "pos": "RB",
+   "signal": "dome",
+   "n": 452,
+   "rho": 0.044
+  },
+  {
+   "pos": "RB",
+   "signal": "primetime",
+   "n": 452,
+   "rho": -0.03
+  },
+  {
+   "pos": "RB",
+   "signal": "rest_days",
+   "n": 452,
+   "rho": 0.029
+  },
+  {
+   "pos": "WR",
+   "signal": "salary",
+   "n": 306,
+   "rho": 0.658
+  },
+  {
+   "pos": "WR",
+   "signal": "log_wiki",
+   "n": 698,
+   "rho": 0.524
+  },
+  {
+   "pos": "WR",
+   "signal": "wiki_spike",
+   "n": 698,
+   "rho": -0.13
+  },
+  {
+   "pos": "WR",
+   "signal": "trends_rel",
+   "n": 304,
+   "rho": 0.129
+  },
+  {
+   "pos": "WR",
+   "signal": "opp_def_rank",
+   "n": 720,
+   "rho": -0.037
+  },
+  {
+   "pos": "WR",
+   "signal": "total_line",
+   "n": 720,
+   "rho": -0.052
+  },
+  {
+   "pos": "WR",
+   "signal": "spread",
+   "n": 720,
+   "rho": -0.022
+  },
+  {
+   "pos": "WR",
+   "signal": "home",
+   "n": 720,
+   "rho": 0.02
+  },
+  {
+   "pos": "WR",
+   "signal": "dome",
+   "n": 720,
+   "rho": -0.065
+  },
+  {
+   "pos": "WR",
+   "signal": "primetime",
+   "n": 720,
+   "rho": -0.037
+  },
+  {
+   "pos": "WR",
+   "signal": "rest_days",
+   "n": 720,
+   "rho": -0.017
+  },
+  {
+   "pos": "TE",
+   "signal": "salary",
+   "n": 196,
+   "rho": 0.579
+  },
+  {
+   "pos": "TE",
+   "signal": "log_wiki",
+   "n": 401,
+   "rho": 0.53
+  },
+  {
+   "pos": "TE",
+   "signal": "wiki_spike",
+   "n": 401,
+   "rho": -0.183
+  },
+  {
+   "pos": "TE",
+   "signal": "trends_rel",
+   "n": 196,
+   "rho": 0.13
+  },
+  {
+   "pos": "TE",
+   "signal": "opp_def_rank",
+   "n": 413,
+   "rho": 0.009
+  },
+  {
+   "pos": "TE",
+   "signal": "total_line",
+   "n": 413,
+   "rho": -0.024
+  },
+  {
+   "pos": "TE",
+   "signal": "spread",
+   "n": 413,
+   "rho": -0.019
+  },
+  {
+   "pos": "TE",
+   "signal": "home",
+   "n": 413,
+   "rho": -0.026
+  },
+  {
+   "pos": "TE",
+   "signal": "dome",
+   "n": 413,
+   "rho": 0.067
+  },
+  {
+   "pos": "TE",
+   "signal": "primetime",
+   "n": 413,
+   "rho": -0.083
+  },
+  {
+   "pos": "TE",
+   "signal": "rest_days",
+   "n": 413,
+   "rho": -0.005
+  },
+  {
+   "pos": "K",
+   "signal": "salary",
+   "n": 16,
+   "rho": -0.485
+  },
+  {
+   "pos": "K",
+   "signal": "log_wiki",
+   "n": 124,
+   "rho": 0.058
+  },
+  {
+   "pos": "K",
+   "signal": "wiki_spike",
+   "n": 124,
+   "rho": -0.142
+  },
+  {
+   "pos": "K",
+   "signal": "opp_def_rank",
+   "n": 124,
+   "rho": 0.058
+  },
+  {
+   "pos": "K",
+   "signal": "total_line",
+   "n": 124,
+   "rho": -0.021
+  },
+  {
+   "pos": "K",
+   "signal": "spread",
+   "n": 124,
+   "rho": -0.012
+  },
+  {
+   "pos": "K",
+   "signal": "home",
+   "n": 124,
+   "rho": -0.131
+  },
+  {
+   "pos": "K",
+   "signal": "dome",
+   "n": 124,
+   "rho": -0.035
+  },
+  {
+   "pos": "K",
+   "signal": "primetime",
+   "n": 124,
+   "rho": -0.079
+  },
+  {
+   "pos": "K",
+   "signal": "rest_days",
+   "n": 124,
+   "rho": -0.032
+  },
+  {
+   "pos": "DST",
+   "signal": "salary",
+   "n": 35,
+   "rho": -0.612
+  },
+  {
+   "pos": "DST",
+   "signal": "opp_def_rank",
+   "n": 136,
+   "rho": -0.028
+  },
+  {
+   "pos": "DST",
+   "signal": "total_line",
+   "n": 136,
+   "rho": -0.31
+  },
+  {
+   "pos": "DST",
+   "signal": "spread",
+   "n": 136,
+   "rho": -0.094
+  },
+  {
+   "pos": "DST",
+   "signal": "home",
+   "n": 136,
+   "rho": -0.027
+  },
+  {
+   "pos": "DST",
+   "signal": "dome",
+   "n": 136,
+   "rho": -0.193
+  },
+  {
+   "pos": "DST",
+   "signal": "primetime",
+   "n": 136,
+   "rho": -0.291
+  },
+  {
+   "pos": "DST",
+   "signal": "rest_days",
+   "n": 136,
+   "rho": -0.056
+  }
+ ],
+ "buckets": [
+  {
+   "label": "Skill players: home vs away",
+   "a": "home",
+   "b": "away",
+   "n_a": 894,
+   "n_b": 897,
+   "mean_a": 5.46,
+   "mean_b": 5.24,
+   "diff": 0.21
+  },
+  {
+   "label": "Skill players: dome vs outdoor",
+   "a": "dome",
+   "b": "outdoor",
+   "n_a": 405,
+   "n_b": 1386,
+   "mean_a": 5.79,
+   "mean_b": 5.22,
+   "diff": 0.57
+  },
+  {
+   "label": "Skill players: primetime vs day",
+   "a": "primetime",
+   "b": "day",
+   "n_a": 422,
+   "n_b": 1369,
+   "mean_a": 5.3,
+   "mean_b": 5.36,
+   "diff": -0.06
+  },
+  {
+   "label": "Skill players: favorite vs underdog",
+   "a": "favorite",
+   "b": "underdog",
+   "n_a": 899,
+   "n_b": 892,
+   "mean_a": 5.6,
+   "mean_b": 5.1,
+   "diff": 0.5
+  },
+  {
+   "label": "Skill players: vs bottom-10 defense vs top-10",
+   "a": "soft D",
+   "b": "tough D",
+   "n_a": 539,
+   "n_b": 519,
+   "mean_a": 5.79,
+   "mean_b": 5.72,
+   "diff": 0.07
+  },
+  {
+   "label": "Skill players: game total >= 47.5 vs < 44",
+   "a": "high total",
+   "b": "low total",
+   "n_a": 639,
+   "n_b": 899,
+   "mean_a": 5.55,
+   "mean_b": 4.99,
+   "diff": 0.56
+  },
+  {
+   "label": "Skill players: Wikipedia spike top quartile vs bottom",
+   "a": "top 25% spike",
+   "b": "bottom 25%",
+   "n_a": 436,
+   "n_b": 435,
+   "mean_a": 4.02,
+   "mean_b": 6.98,
+   "diff": -2.95
+  },
+  {
+   "label": "Salaried skill: most-viewed Wikipedia half vs least (raw pts)",
+   "a": "more views",
+   "b": "fewer views",
+   "n_a": 372,
+   "n_b": 372,
+   "mean_a": 6.56,
+   "mean_b": 0.89,
+   "diff": 5.67
+  }
+ ],
+ "top_patterns": [
+  {
+   "signal": "log_wiki (RB)",
+   "target": "fd_pts",
+   "n": 438,
+   "rho": 0.599,
+   "r": null
+  },
+  {
+   "signal": "log_wiki (QB)",
+   "target": "fd_pts",
+   "n": 201,
+   "rho": 0.568,
+   "r": null
+  },
+  {
+   "signal": "wiki_views_7d",
+   "target": "fd_pts",
+   "n": 1862,
+   "r": 0.364,
+   "rho": 0.546
+  },
+  {
+   "signal": "log_wiki",
+   "target": "fd_pts",
+   "n": 1862,
+   "r": 0.496,
+   "rho": 0.546
+  },
+  {
+   "signal": "log_wiki (TE)",
+   "target": "fd_pts",
+   "n": 401,
+   "rho": 0.53,
+   "r": null
+  },
+  {
+   "signal": "log_wiki (WR)",
+   "target": "fd_pts",
+   "n": 698,
+   "rho": 0.524,
+   "r": null
+  },
+  {
+   "signal": "wiki_views_7d",
+   "target": "value",
+   "n": 760,
+   "r": 0.262,
+   "rho": 0.502
+  },
+  {
+   "signal": "log_wiki",
+   "target": "value",
+   "n": 760,
+   "r": 0.403,
+   "rho": 0.502
+  },
+  {
+   "signal": "own",
+   "target": "fd_pts",
+   "n": 163,
+   "r": 0.457,
+   "rho": 0.455
+  },
+  {
+   "signal": "trends_rel (QB)",
+   "target": "fd_pts",
+   "n": 107,
+   "rho": 0.428,
+   "r": null
+  }
+ ],
+ "notes": [
+  "Spearman rho shown; |rho| < 0.1 is noise at these sample sizes. Small sample: one season, a handful of weeks.",
+  "Salaries exist only for slates we pulled boards for; most Sunday games outside Week 6 have no salary (null).",
+  "Ownership is our model estimate (Week 6 main only), not FanDuel actual ownership.",
+  "X mention volume: null. The X counts API covers only the last 7 days, so past games cannot be backfilled.",
+  "Google Trends values are relative to the term \"NFL\" in the same request; null where Google rate-limited us."
+ ]
+}

@@ -1,0 +1,15 @@
+build,bot,removed_input,players_changed,delta_proj_full_model,players_out,players_in
+Top #1 (median),fanduel-projections,projections,5,-11.93,Ja'Kobi Lane; Jalen Coker; Nico Collins; Tennessee Titans; Woody Marks,Christian McCaffrey; Houston Texans; Isaac TeSlaa; Konata Mumpfield; Tay Martin
+Top #1 (median),fanduel-simulator,simulator,0,0.0,,
+Top #1 (median),fanduel-odds,odds,3,-1.59,Ja'Kobi Lane; Jared Goff; Nico Collins,C.J. Stroud; Chris Godwin Jr.; Tetairoa McMillan
+Top #1 (median),fanduel-offense-overall,offense-overall,1,-0.63,Nico Collins,Zay Flowers
+Top #1 (median),fanduel-injury-report,injury,0,0.0,,
+Top #1 (median),fanduel-game-script,game-script,0,0.0,,
+Top #1 (median),fanduel-ownership,ownership,0,0.0,,
+GPP leverage,fanduel-projections,projections,5,-54.22,Ja'Kobi Lane; Jahmyr Gibbs; Matthew Golden; Sam LaPorta; Tennessee Titans,Amon-Ra St. Brown; Jacob Saylors; Jameson Williams; Konata Mumpfield; San Francisco 49ers
+GPP leverage,fanduel-simulator,simulator,0,0.0,,
+GPP leverage,fanduel-odds,odds,0,0.0,,
+GPP leverage,fanduel-offense-overall,offense-overall,0,0.0,,
+GPP leverage,fanduel-injury-report,injury,0,0.0,,
+GPP leverage,fanduel-game-script,game-script,2,-5.69,Jared Goff; Sam LaPorta,C.J. Stroud; Woody Marks
+GPP leverage,fanduel-ownership,ownership,2,-2.44,Christian McCaffrey; Ja'Kobi Lane,Jalen Coker; Woody Marks
